@@ -18,7 +18,7 @@ spec:
         app: gateway-service
     spec:
       containers:
-        - image: docker.io/murthykolli/gateway-service:0.0.1-SNAPSHOT
+        - image: docker.io/murthykolli/api-gateway:0.0.1-SNAPSHOT
           name: gateway-service
           volumeMounts:
             - mountPath: /app/config
