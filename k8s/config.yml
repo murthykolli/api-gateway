@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  application.yml: |
+    movie-service.url: http://movie-service:8080/movies
+    ratings-service.url: http://ratings-service:8080/ratings
+    admin.username: sudo123
+    admin.password: pass123
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: gateway-service-config

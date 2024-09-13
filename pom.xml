@@ -61,8 +61,8 @@
 						</exclude>
 					</excludes>
 
-					<!--<image>
-						<name>docker.io/softwarebhayya/${project.artifactId}:${project.version}</name>
+					<image>
+						<name>docker.io/murthykolli/${project.artifactId}:${project.version}</name>
 						<publish>true</publish>
 					</image>
 					<docker>
@@ -70,7 +70,7 @@
 							<username>${env.DOCKERHUB_USER}</username>
 							<password>${env.DOCKERHUB_PWD}</password>
 						</publishRegistry>
-					</docker>-->
+					</docker>
 
 				</configuration>
 			</plugin>

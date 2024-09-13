@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: gateway-service
+  name: gateway-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway-service
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: gateway-service
+    spec:
+      containers:
+        - image: docker.io/murthykolli/gateway-service:0.0.1-SNAPSHOT
+          name: gateway-service
+          volumeMounts:
+            - mountPath: /app/config
+              name: gateway-service-config
+          env:
+            - name: SPRING_CONFIG_LOCATION
+              value: /app/config/
+      volumes:
+        - name: gateway-service-config
+          configMap:
+            name: gateway-service-config
+
+status: {}
